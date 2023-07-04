@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <script type="text/javascript" src="script.js"></script>
+    
 
     <header>
       <ul class="navbar">
@@ -23,9 +23,28 @@
       <div class="navbar-right">
         <a href="../signIn/signIn.html">Sign in <i class="fa-solid fa-user"></i></a>
 
-        <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" onclick="showCart()">Cart <i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </header>
+     <!-- CART -->
+     <div id="cart">
+      <p id="x" onclick="hideCart()">X</p>
+      <h1>Cart Items</h1>
+
+      <div id="product-container">
+        <!-- DIV-uL CREAT IN JS -->
+        <!-- <div>
+        <p>Nume produs</p>
+        <p>0.20</p>
+      </div> -->
+      </div>
+      <div class="cart-bottom">
+        <p id="totalPrice">Total price : 0 RON</p>
+
+        <button id="buyNow" onclick="buyNow()">BUY NOW</button>
+      </div>
+    </div>
+
 
     <div class="boxContainer">
       <div class="name-contact">
@@ -55,7 +74,7 @@
         <li><a href="../Transistors/transistors.html">Transistors</a></li>
         <li><a href="../Connectors/conectors.html">Connectors</a></li>
         <li><a href="../Inductors/inductors.html">Inductors</a></li>
-        <li><a href="#">Jumper Wires</a></li>
+        <li><a href="../PCB/pcb.html">Printed Circuit Board</a></li>
       </ul>
     </div>
   </body>
@@ -74,7 +93,12 @@
         <button class="view-button">
           <a href="../Capacitors/capacitorDetail.html">VIEW</a>
         </button>
-        <button class="product-button">ADD TO CART</button>
+        <button
+        data-price="18.32"
+        data-name="CAP MICA PL"
+        onclick="addProduct(this)"
+        class="product-button"
+      >ADD TO CART </button>
       </div>
       <div class="product">
         <img class="product-images" src="../images/Capacitors/capacitor2.jpg" />
@@ -84,7 +108,12 @@
         <button class="view-button">
           <a href="../Capacitors/capacitorDetail.html">VIEW</a>
         </button>
-        <button class="product-button">ADD TO CART</button>
+        <button
+        data-price="18.32"
+        data-name="CAP MICA PL"
+        onclick="addProduct(this)"
+        class="product-button"
+      >ADD TO CART </button>
       </div>
 
       <div class="product">
@@ -98,7 +127,12 @@
         <button class="view-button">
           <a href="../Capacitors/capacitorDetail.html">VIEW</a>
         </button>
-        <button class="product-button">ADD TO CART</button>
+        <button
+        data-price="18.32"
+        data-name="CAP MICA PL"
+        onclick="addProduct(this)"
+        class="product-button"
+      >ADD TO CART </button>
       </div>
       <div class="product">
         <img
@@ -288,6 +322,7 @@ CAP FILM 0.022UF 5% 3KVDC RADIAL </p>
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="../script.js"></script>
 </body>
 </html>
 

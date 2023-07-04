@@ -12,22 +12,41 @@
   </head>
 
   <body>
-    <script type="text/javascript" src="script.js"></script>
-
     <header>
       <ul class="navbar">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="contactUs/contactUs.html">Contact us</a></li>
-        <li><a href="#">About us</a></li>
+        <li><a href="aboutUs/">About us</a></li>
       </ul>
       <div class="navbar-right">
         <a href="/signIn/signIn.html"
           >Sign in <i class="fa-solid fa-user"></i
         ></a>
 
-        <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" onclick="showCart()"
+          >Cart <i class="fa-solid fa-cart-shopping"></i
+        ></a>
       </div>
     </header>
+
+    <!-- CART -->
+    <div id="cart">
+      <p id="x" onclick="hideCart()">X</p>
+      <h1>Cart Items</h1>
+
+      <div id="product-container">
+        <!-- DIV-uL CREAT IN JS -->
+        <!-- <div class='product-item'>
+        <p class='product-name'>Nume produs</p>
+        <p class='product-price'>0.20</p>
+      </div> -->
+      </div>
+      <div class="cart-bottom">
+        <p id="totalPrice">Total price : 0 RON</p>
+
+        <button id="buyNow" onclick="buyNow()">BUY NOW</button>
+      </div>
+    </div>
 
     <div class="boxContainer">
       <div class="name-contact">
@@ -57,7 +76,9 @@
         <li><a href="Transistors/transistors.html">Transistors</a></li>
         <li><a href="Connectors/conectors.html">Connectors</a></li>
         <li><a href="Inductors/inductors.html">Inductors</a></li>
-        <li><a href="#">Printed Circuit Board</a></li>
+        <li>
+          <a href="PCB/pcb.html">Printed Circuit Board</a>
+        </li>
       </ul>
     </div>
 
@@ -74,7 +95,7 @@
     <div class="products">
       <div class="items">
         <img class="release-images" src="images/capacitor.jpg" />
-        <p>Date resistor, val</p>
+        <p>CAP ALUM 100UF 20% 400V</p>
 
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -83,7 +104,11 @@
         </div>
         <p>In stock</p>
         <p>0.20 RON</p>
-        <button>
+        <button
+          data-price="0.20"
+          data-name="CAP ALUM 100UF 20% 400V"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -92,15 +117,19 @@
       </div>
       <div class="items">
         <img class="release-images" src="images/resistor.jpg" />
-        <p>Date resistor, val</p>
+        <p>Resistor 15 Ohm 1/4 watt RE24</p>
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
           ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>0.30 RON</p>
+        <button
+          data-price="0.30"
+          data-name="Resistor 15 Ohm 1/4 watt RE24"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -109,15 +138,19 @@
       </div>
       <div class="items">
         <img class="release-images" src="images//inductor.jpeg" />
-        <p>Date resistor, val</p>
+        <p>Inductor THT 1.5mH; 8.7mΩ</p>
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
           ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>12 RON</p>
+        <button
+          data-price="12"
+          data-name="Inductor THT 1.5mH; 8.7mΩ"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -126,15 +159,19 @@
       </div>
       <div class="items">
         <img class="release-images" src="images/connectors.jpg" />
-        <p>Date resistor, val</p>
+        <p>Connector: male PIN: 9</p>
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
           ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>10 RON</p>
+        <button
+          data-price="0.20"
+          data-name="CAP ALUM 100UF 20% 400V"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -143,15 +180,19 @@
       </div>
       <div class="items">
         <img class="release-images" src="images/switch.jpeg" />
-        <p>Date resistor, val</p>
+        <p>Pushbutton 0,05A/24VDC</p>
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
           ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>0.30 RON</p>
+        <button
+          data-price="0.20"
+          data-name="CAP ALUM 100UF 20% 400V"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -159,7 +200,7 @@
         </button>
       </div>
       <div class="items">
-        <img class="release-images" src="images/wires.jpg" />
+        <img class="release-images" src="images/PCB/pcb2.jpg" />
         <p>Date resistor, val</p>
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -167,8 +208,12 @@
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>15 RON</p>
+        <button
+          data-price="0.20"
+          data-name="CAP ALUM 100UF 20% 400V"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -176,16 +221,20 @@
         </button>
       </div>
       <div class="items">
-        <img class="release-images" src="images/capacitor.jpg" />
-        <p>Date resistor, val</p>
+        <img class="release-images" src="images/Switches/switchJoy2.jpg" />
+        <p>Joystick, 4kΩ, IP65; ±2%</p>
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
           ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>32 RON</p>
+        <button
+          data-price="0.20"
+          data-name="CAP ALUM 100UF 20% 400V"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -201,8 +250,12 @@
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>0.60 RON</p>
+        <button
+          data-price="0.20"
+          data-name="CAP ALUM 100UF 20% 400V"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -210,16 +263,20 @@
         </button>
       </div>
       <div class="items">
-        <img class="release-images" src="images/capacitor.jpg" />
-        <p>Date resistor, val</p>
+        <img class="release-images" src="images/inductors/inductorS4.jpeg" />
+        <p>Inductor: THT; 1.5mH; 8.7mΩ</p>
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
           ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>12 RON</p>
+        <button
+          data-price="0.20"
+          data-name="CAP ALUM 100UF 20% 400V"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -227,16 +284,20 @@
         </button>
       </div>
       <div class="items">
-        <img class="release-images" src="images/capacitor.jpg" />
-        <p>Date resistor, val</p>
+        <img class="release-images" src="images/connectors/conectorF1.jpg" />
+        <p>Connector: PIN: 40; 500mA</p>
         <div>
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
           ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i> <span> (8)</span>
         </div>
         <p>In stock</p>
-        <p>0.20 RON</p>
-        <button>
+        <p>3 RON</p>
+        <button
+          data-price="0.20"
+          data-name="CAP ALUM 100UF 20% 400V"
+          onclick="addProduct(this)"
+        >
           <div class="button-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -247,9 +308,7 @@
     <div class="bottom-banner">
       <i class="fa-thin fa-arrow-right"></i>
       <div class="main-content-info">
-        <h1>BUILD YOUR OWN PCB</h1>
-        <h2>GET COMPONENTS NOW</h2>
-        <button class="main-content-button">BUY</button>
+        <h1 class="bottom-banner">BUILD YOUR OWN PCB</h1>
       </div>
     </div>
 
@@ -271,5 +330,6 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
