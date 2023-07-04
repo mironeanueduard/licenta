@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+*,
+*::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --bg-color: white;
+  --text-color: white;
+  --main-color: grey;
+}
+body {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 10px 12%;
+  transition: all.50s ease;
+  background-color: darkred;
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 0;
+  margin: 10px 20px;
+  transition: all 0.5s ease;
+
+  overflow: auto;
+}
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+.navbar-right a {
+  margin-right: 25px;
+  margin-left: 10px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  color: var(--text-color);
+}
+.navbar-right a:hover {
+  color: var(--main-color);
+}
+
+.boxContainer {
+  margin: auto;
+  margin-top: 4%;
+  position: relative;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 1px gray;
+  padding: 20px;
+}
+.elementsContainer {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.search {
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0px 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.search:focus {
+  outline: none;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+}
+.categories li {
+  padding: 20px;
+}
+.categories li a {
+  color: black;
+  font-size: 18px;
+}
+
+.main-content {
+  background-image: url("images/PCBB.jpg");
+
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 10px solid darkred;
+}
+.main-content-info {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-left: 40px;
+  padding-top: 150px;
+  color: white;
+}
+.main-content-button {
+  width: 100px;
+  margin-top: 50px;
+}
+.main-content-info h1 {
+  font-size: 60px;
+}
+
+.firm-name {
+  font-size: 35px;
+  color: red;
+}
+.contact-us {
+  font-size: 20px;
+}
+.search-bar input {
+  font-size: 20px;
+}
+.main-content-button {
+  font-size: 20px;
+  background-color: darkred;
+  color: white;
+}
+
+.footer {
+  margin: auto;
+  margin-top: 4%;
+  position: relative;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 1px gray;
+  padding: 20px;
+  background-color: #faebd7;
+}
+.presentation {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f2f2f7;
+}
+.fa-star {
+  color: rgb(195, 195, 47);
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f2f2f7;
+}
+
+.items {
+  background-color: white;
+
+  margin: 10px;
+  padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 18%;
+}
+
+.items button {
+  cursor: pointer;
+  display: flex;
+  border-radius: 5px;
+  background-color: #3985e0;
+}
+.items button:hover {
+  background-color: #1256a4;
+  transition: all 0.3s;
+}
+
+.button-icon {
+  background-color: darkred;
+  padding: 10px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+}
+
+.add {
+  background-color: #3985e0;
+  padding: 10px;
+  color: white;
+}
+.add:hover {
+  background-color: #1256a4;
+  transition: all 0.3s;
+}
+
+.release-images {
+  width: 150px;
+  height: 150px;
+}
+.bottom-banner {
+  background-image: url(images/PCBB.jpg);
+}
