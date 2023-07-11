@@ -233,7 +233,7 @@ header {
   align-items: center;
   border-bottom: solid 1px gray;
   padding: 20px;
-  background-color: #faebd7;
+  background-color: whitesmoke;
 }
 .view-button {
   margin: 10px;
@@ -246,9 +246,8 @@ header {
 .box {
   width: 70%;
   height: 600px;
-  background-color: beige;
+  background-color: white;
   margin: 0 auto;
-  border-radius: 30px;
 }
 .box-image {
   height: 300px;
@@ -259,7 +258,7 @@ header {
   justify-content: space-around;
   padding: 20px;
   gap: 20px;
-  background-color: #faebd7;
+  border-radius: 40px;
 }
 
 .details {
@@ -267,6 +266,7 @@ header {
 }
 .details * {
   margin-bottom: 10px;
+  color: black;
 }
 .price * {
   margin-bottom: 10px;
@@ -290,4 +290,23 @@ header {
 .main-title {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.rbutton {
+  background-color: darkred;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fa-star {
+  color: rgb(201, 201, 12);
+}
+.firm {
+  color: darkred;
+  font-weight: bold;
+}
+.main-content-button {
+  background-color: darkred;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
 }

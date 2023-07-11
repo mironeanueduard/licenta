@@ -233,7 +233,7 @@ header {
   align-items: center;
   border-bottom: solid 1px gray;
   padding: 20px;
-  background-color: #faebd7;
+  background-color: whitesmoke;
 }
 .view-button {
   margin: 10px;
@@ -259,7 +259,7 @@ header {
   justify-content: space-around;
   padding: 20px;
   gap: 20px;
-  background-color: #faebd7;
+  background-color: white;
 }
 
 .details {
@@ -290,4 +290,13 @@ header {
 .main-title {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.capabutton {
+  background-color: darkred;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fa-star {
+  color: rgb(201, 201, 12);
 }

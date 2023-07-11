@@ -239,5 +239,8 @@ header {
 .view-button {
   margin: 10px;
   border: none;
-  color: blue;
+}
+
+.view-button a {
+  color: black;
 }

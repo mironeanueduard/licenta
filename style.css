@@ -73,7 +73,7 @@ header {
 
 .boxContainer {
   margin: auto;
-  margin-top: 4%;
+
   position: relative;
   padding: 0px 10px;
   display: flex;
@@ -228,6 +228,7 @@ header {
 }
 .bottom-banner {
   background-image: url(images/testimg.jpg);
+  padding-bottom: 30px;
 }
 
 #cart {
@@ -273,7 +274,8 @@ header {
 }
 .bottom-banner {
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
+  font-size: 40px;
 }
 .product-name {
   font-weight: bold;
@@ -282,4 +284,8 @@ header {
   background-color: darkred;
   color: white;
   padding: 10px;
+}
+.position {
+  position: fixed;
+  position: sticky;
 }

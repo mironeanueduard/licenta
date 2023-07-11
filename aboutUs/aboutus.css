@@ -233,7 +233,7 @@ header {
   align-items: center;
   border-bottom: solid 1px gray;
   padding: 20px;
-  background-color: #faebd7;
+  background-color: whitesmoke;
 }
 .view-button {
   margin: 10px;
@@ -425,4 +425,10 @@ h2:after {
 }
 .content {
   display: flex;
+}
+.description-firm {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  padding: 20px;
+  line-height: 1.6;
 }
